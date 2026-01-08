@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./navbar.module.scss";
+import styles from "./navbar.module.scss";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,19 +28,23 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
-        <div className="navbar-links">
+    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
+      <div className={styles["navbar-container"]}>
+        <div className={styles["navbar-links"]}>
           <a onClick={() => scrollToSection("hero")}>Hjem</a>
-          <span className="separator">|</span>
+          <span className={styles.separator}>|</span>
           <a onClick={() => scrollToSection("team")}>Advokaterne</a>
-          <span className="separator">|</span>
+          <span className={styles.separator}>|</span>
           <a onClick={() => scrollToSection("about")}>Om LeoLov</a>
-          <span className="separator">|</span>
+          <span className={styles.separator}>|</span>
           <a onClick={() => scrollToSection("contact")}>Kontakt</a>
         </div>
+        <div className={styles["navbar-logo"]}>
+          <span className={styles["logo-leo"]}>Leo</span>
+          <span className={styles["logo-lov"]}>-Lov</span>
+        </div>
       </div>
-      <div className="navbar-accent"></div>
+      <div className={styles["navbar-accent"]}></div>
     </nav>
   );
 };
