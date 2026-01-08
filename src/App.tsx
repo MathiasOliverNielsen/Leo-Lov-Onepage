@@ -1,12 +1,12 @@
 import "./App.css";
-import Hero from "./components/Hero/Hero.tsx";
 import Navbar from "./components/Navbar/Navbar.tsx";
+import Hero from "./components/Hero/Hero.tsx";
 
 function App() {
   return (
     <>
-      <Hero />
       <Navbar />
+      <Hero />
     </>
   );
 }

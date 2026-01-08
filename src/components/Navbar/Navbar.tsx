@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import "./Navbar.Module.scss";
+import React, { useState, useEffect } from "react";
+import "./navbar.module.scss";
 
 const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.querySelector(".navbar");
-      if (navbar) {
-        if (window.scrollY > 10) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,7 +28,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="navbar-links">
           <a onClick={() => scrollToSection("hero")}>Hjem</a>
@@ -43,10 +38,6 @@ const Navbar: React.FC = () => {
           <a onClick={() => scrollToSection("about")}>Om LeoLov</a>
           <span className="separator">|</span>
           <a onClick={() => scrollToSection("contact")}>Kontakt</a>
-        </div>
-        <div className="navbar-logo">
-          <span className="logo-leo">Leo</span>
-          <span className="logo-lov">-Lov</span>
         </div>
       </div>
       <div className="navbar-accent"></div>
