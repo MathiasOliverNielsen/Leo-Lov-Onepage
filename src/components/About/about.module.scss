@@ -18,6 +18,10 @@
   gap: 10px;
   border: 8px solid #2c3b6f;
   background-color: #2c3b6f;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .about-image {
