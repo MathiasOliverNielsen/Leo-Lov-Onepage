@@ -1,40 +1,43 @@
 import React from "react";
 import Styles from "./footer.module.scss";
 
+// Reusable Footer Column
+interface FooterColumnProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const FooterColumn: React.FC<FooterColumnProps> = ({ title, children }) => (
+  <div className={Styles["footer-column"]}>
+    <h3 className={Styles["footer-title"]}>{title}</h3>
+    <div className={Styles["footer-content"]}>{children}</div>
+  </div>
+);
+
 const Footer: React.FC = () => {
   return (
     <footer className={Styles.footer}>
       <div className={Styles["footer-container"]}>
-        <div className={Styles["footer-column"]}>
-          <h3 className={Styles["footer-title"]}>Adresse</h3>
-          <div className={Styles["footer-content"]}>
-            <p>Find os her:</p>
-            <p>Maldive rd. 22,</p>
-            <p>Seychelle Islands</p>
-          </div>
-        </div>
+        <FooterColumn title="Adresse">
+          <p>Find os her:</p>
+          <p>Maldive rd. 22,</p>
+          <p>Seychelle Islands</p>
+        </FooterColumn>
 
-        <div className={Styles["footer-column"]}>
-          <h3 className={Styles["footer-title"]}>Kontakt</h3>
-          <div className={Styles["footer-content"]}>
-            <p>Kontakt os her:</p>
-            <p>email@mail.dk</p>
-            <p>Tlf: 0192 3023</p>
-          </div>
-        </div>
+        <FooterColumn title="Kontakt">
+          <p>Kontakt os her:</p>
+          <p>email@mail.dk</p>
+          <p>Tlf: 0192 3023</p>
+        </FooterColumn>
 
-        <div className={Styles["footer-column"]}>
-          <h3 className={Styles["footer-title"]}>Politik</h3>
-          <div className={Styles["footer-content"]}>
-            <p>Vores politikker:</p>
-            <p>Privatlivspolitk</p>
-            <p>Cookiepolitik</p>
-            <p>Generalle betingelse</p>
-          </div>
-        </div>
+        <FooterColumn title="Politik">
+          <p>Vores politikker:</p>
+          <p>Privatlivspolitk</p>
+          <p>Cookiepolitik</p>
+          <p>Generalle betingelse</p>
+        </FooterColumn>
 
-        <div className={Styles["footer-column"]}>
-          <h3 className={Styles["footer-title"]}>Sociale medier</h3>
+        <FooterColumn title="Sociale medier">
           <div className={Styles["footer-social"]}>
             <a href="#" className={Styles["social-icon"]} aria-label="Facebook">
               <svg width="43" height="41" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +56,7 @@ const Footer: React.FC = () => {
               </svg>
             </a>
           </div>
-        </div>
+        </FooterColumn>
       </div>
     </footer>
   );
