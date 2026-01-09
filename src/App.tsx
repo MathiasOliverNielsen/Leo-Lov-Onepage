@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero.tsx";
 import Services from "./components/Services/Services.tsx";
 import About from "./components/About/About.tsx";
 import Team from "./components/Team/Team.tsx";
+import Location from "./components/Location/Location.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <About />
       <Team />
+      <Location />
     </>
   );
 }
