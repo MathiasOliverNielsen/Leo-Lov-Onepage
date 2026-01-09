@@ -5,6 +5,7 @@ import Services from "./components/Services/Services.tsx";
 import About from "./components/About/About.tsx";
 import Team from "./components/Team/Team.tsx";
 import Location from "./components/Location/Location.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Team />
       <Location />
+      <Footer />
     </>
   );
 }
