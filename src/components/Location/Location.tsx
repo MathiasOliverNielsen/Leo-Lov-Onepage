@@ -15,23 +15,22 @@ const Location: React.FC = () => {
 
           <div className={styles["location-text-container"]}>
             <div className={styles["location-text"]}>
-              <h2>FIND OS HER</h2>
+              <h2>HER BOR VI</h2>
               <p>
-                Leo-lov holder til i hjertet af byen, hvor retfærdigheden lever og ånder. Vores kontorer er strategisk placeret for nem adgang til domstolene.
+                Vi har valgt at bosætte os i sølen!
                 <br />
                 <br />
-                Kom forbi og oplev vores professionelle miljø, hvor vi hver dag kæmper for vores klienters rettigheder med passion og dedikation.
+                Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget.
+                <br />
+                <br />
+                "Hvis du har råd til at tage til Seychellerne har du råd til os". Det er et af vores utallige motto'er.
               </p>
               <div className={styles["location-details"]}>
                 <p>
-                  <strong>Adresse:</strong> Retslig Gade 42, 1234 København
+                  <strong>Leo-Lov ApS</strong>
                 </p>
-                <p>
-                  <strong>Telefon:</strong> +45 12 34 56 78
-                </p>
-                <p>
-                  <strong>Email:</strong> kontakt@leo-lov.dk
-                </p>
+                <p>Maldive rd. 22</p>
+                <p>Seychelles</p>
               </div>
             </div>
           </div>
